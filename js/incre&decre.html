@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="-" onclick="dec()">
+    <input type="text" id="a" value="0" readonly min="0">
+    <input type="button" value="+" onclick="inc()">
+    <script>
+        var num=0;
+        function inc()
+        {
+            num++;
+            if (num<=30)
+            {
+                document.getElementById("a").value=num
+            }
+            else{
+                document.getElementById("a").value=30;
+                num=30;
+            }
+        }
+        function dec()
+        {
+            num--;
+            if(num>=0)
+            {
+                document.getElementById("a").value=num
+            }
+            else{
+                document.getElementById("a").value=0;
+                num=0;
+            }
+        }
+    </script>
+    
+</body>
+</html>
